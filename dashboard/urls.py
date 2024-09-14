@@ -1,0 +1,27 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('dashboard/', views.index, name='dashboard-index'),
+    path('staff/', views.staff, name='dashboard-staff'),
+    path('staff/detail/<int:pk>/', views.staff_detail, 
+        name='dashboard-staff-detail'),
+    path('client/', views.client, name='dashboard-client'),
+    path('client/delete/<int:pk>/', views.client_delete, 
+        name='dashboard-client-delete'),
+    path('client/update/<int:pk>/', views.client_update, 
+        name='dashboard-client-update'),
+    path('fournisseur/', views.fournisseur, name='dashboard-fournisseur'),
+    path('fournisseur/delete/<int:pk>/', views.fournisseur_delete, 
+        name='dashboard-fournisseur-delete'),
+    path('fournisseur/update/<int:pk>/', views.fournisseur_update, 
+        name='dashboard-fournisseur-update'),
+    path('product/', views.product, name='dashboard-product'),
+    path('product/delete/<int:pk>/', views.product_delete, 
+        name='dashboard-product-delete'),
+    path('product/update/<int:pk>/', views.product_update, 
+        name='dashboard-product-update'),
+    path('product_add/', views.product_add, 
+    name='dashboard-product-add'),
+    path('Order/', views.order, name='dashboard-order')
+]

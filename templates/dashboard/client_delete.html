@@ -1,0 +1,25 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Delete page{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="border bg-light p-3">
+                    <h3 style="color: #333;">Delete</h3>
+                    <hr>
+                    <div class="alert alert-danger">
+                        <h4 style="color: #721c24;">Are you sure you want to delete?</h4>
+                    </div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form }}
+                        <a class="btn btn-secondary" href="{% url 'dashboard-fournisseur' %}" style="background-color: #6c757d; color: #fff;">Cancel</a>
+                        <input class="btn btn-danger" type="submit" value="Confirm" style="background-color: #dc3545; color: #fff;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

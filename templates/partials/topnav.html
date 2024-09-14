@@ -1,0 +1,67 @@
+<div class="col-md-13 mt-4">
+    <div class="card">
+        <div class="card-header bg-info text-white">
+            Menu 
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-staff' %}">
+                        <div class="card my-card shadow">
+                            <div class="card-body text-center">
+                                <h4>Utilisateurs <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACAUlEQVR4nO2Vz0sVURTHP5BGQqIRtKiFixaKEAjRpgzahP4BLjQ3thJBCXuLFvYLQtu4sk2li0AqkUJBDAoUXbp4RIWkEEgIhvZDX4uoBF8cOAPD5cyd+94UbTxwNvd8z/cz986ZO7Af/zmuAwXgAzACHCmh9yTwHNgEPgM30hqOAhPAd6Do5BJwMAB6QmFu/zrQmNT01GiIZ1cA+L6nf9pqkKP85WnaA7oDwK88HltWw7mU3Q6orgK4AuSBH8AnoC/mcwh4meDx0wK3eaDvgANApcf0I9CjXsd0MF3Newvc7gFfVU1vyqlINqt2zKitWuDOALOFALAMl8Rlo7ZsgS1hlA2qWQkAz6q2xaidtsDXPGYXVfMiAHxPtR3O+iIJMekxux3wOqKUIZUYdtaPJ4HlM7gEPARmEnaRCwBHg3jXWQ+KSqcpuiplyHY9ULmAmlT7xKl1pEEF8sBpGtUTsXYSzyHV1ALbxs33DDjvAsW4Xy9zy/Rx7GpdM+prCkx7uCIwrjcgdfpx+8TyxK1qXG/UZU3iAvA7YBZyIp4KEO7pK4jCrUfxKMCrCLwW8dcU0RxwJmZ+ytDIWhRngfkUz520YXPnQP7JG4bRht5+VfzFOAzcAb4EHOE3YBCozgqt0X9vscTMa2/ZcasMaJQ3s4DfZgC/yQIuZACXNLn7wb+KP6SLmEc84zRuAAAAAElFTkSuQmCC">
+
+                                </i></h4>
+                                <h3>{{ customer_count }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-client' %}">
+                        <div class="card my-card shadow">
+                            <div class="card-body text-center">
+                                <h4>Client <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA40lEQVR4nO3SP0oDYRQE8F8XscgRtNIzWFnYCNEip/ACeoScIxfwBPnTWK4ewkYJxC5aBCN8YeEFZLNrsrKpkoHHx+4MM9/sWw7Ya9ziGV9x3jRtnkqm21TAS0VAVtCdYhwtRzjZNmBWETAr6MYFfth0g89436m4QO0ddAq60X8biL8mi1tmJearHQxDM6izg52ijQc8YYJFnPnzffA5jtHDK77xhv6mFteYVnz/FDMN3RV+SvgPnJeZX2K+wTzFzEN/hwu0cIbH4PO2a3jf0jzF5PqjP/g11DFPv0x2HnDAvmMJdNWR8H7FJ6EAAAAASUVORK5CYII=">
+                                </i></h4>
+                                <h3>{{ product_count }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-product' %}">
+                        <div class="card my-card shadow">
+                            <div class="card-body text-center">
+                                <h4>Stock<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABB0lEQVR4nO2VP0rEQBSHv0Kbtd7CUvYUipLWINhutyfYG+gJcgwrLyDbG3BPkF4Se5dtFnaVyMCvCvkzSZin4H4wTfKb94Uw7w38V1Kg1HoH5r8hLoEDMMOYJ8kfOz5uyErbxPcKvQUQv7aJz4Ad8AVMK+/qil3V1LhuyHayUnBReV5XzEmq3AwVLxV89hD3WZ1cKLgBTi3FjkzhCGNxonBiLY4UzqzFJ8CnNswsxehUlzrlpuKFNri+dhQjpHkfsZtc35pkbqLFA+U5cEtP1trsZrgpDxK/ABNL8TmwDX0lNnGpX74PdSUeqeMO+FBbufYam/Om8BwKvrm/L45VtGsa+eaOEJQfKgwobOCvRdwAAAAASUVORK5CYII=">
+                                </i></h4>
+                                <h3>{{ product_count }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-order' %}">
+                        <div class="card my-card shadow">
+                            <div class="card-body text-center">
+                                <h4>Transaction<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABKElEQVR4nO2TvUoDURCFvzRJ5W7q+AQWvkDQUjCVmtcwau0j+CR5DwuNRCWNRiEQMIV9TL8ycBaGJbl7d4OF6IGB/Tkz370z98K/aqoFXAAjYKW4BwZAky21C0yAbEM8Ax3nbwBXwCx25XnxF+AE2FGcAlP9e3I7GTp4qS5lfAVSfUuAIz2nDnJeB/Ago63cdKP+j53nTB6biW/RPAbwpWRrieka+CwAEnmW1NCyAECz8IBUHltMZY2UbAPN9Qjcuvd+4IQtgF4IMJBx6oa8D+zpuQ28BwAWHyFAU+fcjG8aaKLoRxSPOk0dB8k2RLeQc1AFkO/EzvmdhrkqFLCCXodVAeuUVYhSzXR5Gj8FyI3DXwuYr2nRIrJ48B6E1FNyWfHjugD+pr4BnS2xurzjG6oAAAAASUVORK5CYII=">
+                                    
+                                </i></h4>
+                                <h3>{{ order_count }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-fournisseur' %}">
+                        <div class="card my-card shadow">
+                            <div class="card-body text-center">
+                                <h4>Fournisseur<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+0lEQVR4nO3WwQoBQRzH8W95AgeluEmewdFFjspjeAEvgItc5OrmrijSnsgbUFJOHMhN4aTVlq1t210zuzOt4le/y+72/8xsuzXwz5cmB/SBHXADLsAIKOhEq8ADMD16AupASsdObz6os0cgrRLuCaB2myrhrQS8Vgk/JOCrSvgcFzyVgA2V8FgCtp5VlqMEfFAJdyXgDopjCKBzNKQiAJfRlHYA2kBzTJ9qj+nqBMjoRmsecFYXlgBKwBB4BrzilcQvtwwCi8DgfcoIGmJHFDX9vgnrFDELMcB9Pe+4l/8EJ4F9yJVH2nErwoBI8CYu+B4XHCW/By8l0MULkqBYdSQ0PqkAAAAASUVORK5CYII="></i></h4>
+                                <h3>{{ fournisseur_count }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

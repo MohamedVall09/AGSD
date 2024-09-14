@@ -1,0 +1,35 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+        <a class="nav-link text-white" href="{% url 'dashboard-index' %}">
+           <h2 style="color: rgb(8, 95, 129);">AGS</h2> <span class="sr-only">(current)</span>
+        </a>
+    <div class="container" >
+        {% if user.is_authenticated %}
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'user-profile' %}">
+                        {{user.username}} <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAu0lEQVR4nO2SMQrCQBBFX5HCM6ipcwi9kjfQRi9jJJBWWwUPoBfIAVSSdKlWhBHC6o6CY7cPPuwyzH/FLkSMSIECaCUlkFmWXwHn5SaznynelD+zsRC0iqD5t6C2EJSKILcQZPKgfvkFGGNEKg/aSHLL8kiQBJgCK2Au9/5sASyBiTf7yACYAZX3a9ZSlMi5P6tk57GrMgLOyr8/SkLzEzDUBDtl2X2ZrSboDASdJnBGCXIwKN+H6yO8cgedY5P4XpDfnQAAAABJRU5ErkJggg=="> 
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'user-logout' %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZUlEQVR4nO3WQS8dYRTG8d9Wy7IURWhTPgzWWp9AXAvxadCm20YqaSrYs5BgRdMbVmxJCNVF0ZA3OZJZyL3DTCcW/sm7O3Oed86cc+bhmSdID2pYRR0X+INDLGEGnWUKdmMe17hpci7xBa+Lio7iPJL+xVeMYRAv0YJ+fMBCCKfYU/Q9VnQK/yLRQgg0I8V8x9FjhUdDNJV3WkV0Z8pbmWjiU6a8lY7MdTRSnm/aiDVsoz1PcC3eNnVvUTYj124e8ZUITuNRlPYQzSW+H4HvlMMr7ETOeqPNdtfNbU0SrufYYved7ScnvBcB71Vc6pX/1Fw/mzXXZInjtPWQcXqDq1ggAwWFNx6yQBJzcdNvKqYr093JVVTKSOa3WLl4LWMEFvE2xzMDYQSOiziQxDDOMtYn/So/YgiteBEXGo+euIrYE/QqSCdmM0kbnXS5z+hQsjOZwDJ+4XfY2wP8CLdS2F0+o2xuAT45kt+48OpRAAAAAElFTkSuQmCC"></a>
+                </li>
+            </ul>
+            
+            {% else %}
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'user-register' %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR4nO2WPUsDQRBAH1iJKAga7BX9DZqksBFL0djaWPorNFEbsRFbO3vBwg/S+ANMLBRUsDKFYqPRmMpEFubgsuwmt2EOGx8MHDe7ebeze3OBf7ozCRwCj0ADeANOgBlSZAloAm1HvAAbwHgaK214pPGoAROa4oME0ii2NcX3AeJbTXEzQFzXFL/+lfgsQFzWFJ8GiM1YNWoB4mdN8X6AeA9lygmkl6TAYg9pC1ggJXY90gcgT8q0rbgCRiSXAUpAFfiSqABFyamJzUqH5f6qNI9ujaXQr3TF2tNsTNpKcPhaIfIBYB44Bn5iP3Ih+YxnpXNAznH/o9d3exY4kn8Zrqdfk3ElTz7CldtyCc3TnCco25SMv+lDXLGlo8BTwg41KHPqVnl95KyD1sFOQGsccoijw+Yib+1zB3cB4mmZU9Uo9XeAeF3mFPsQb6KA73XKWuVtS7wDYyhRCGggy1rSuNwcGp/UrFRdGmF6gGkO18CnhLk2e9pR3l9Tl1R/FSAylwAAAABJRU5ErkJggg=="> <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'user-login' %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVR4nO2WTSuEURTHf1thaWK85aXGd5GNBmk+AcZbyEcx1JSUiJlZTT4AC4UVMtaSrdeEMejWf+pJZuY+z3NpFv51N7dz/v97zz3n3AP/qEN0AsvAHnANPANPQEF7U0CHS8EuYAMoAZ81VhFYA6JhRceAO5G+AJvACNANNACNQAwYB7aBV9k+AENBRWeADxHt6ua10Atk5GMilPQrGpeocZ4OcOgF4F3+1jdvV6jMqWcDiHrFDcc90GbjkJZDlvDIimvVxngFuFH5VMI+cAJEanD1KeGKimRoHOkmZxbiO7KddCEckaiNeEJ2eRyhBTgVaaFKAsVkc1mN7MCiO1Va5s1/QrOnqdSf8G+EekA2FzhOrvO/TK7jAOU04aKBHFo2kH4/DSStE+YIj5y4UjbGUTV24zAfQnRRHOY/b7V1Gta3aNZcQNHytzjo1znpGQQymjqweNNyeEuawwIhDtx6Rp8tYBTo0ejTpDpNaEp584TX902/w2T3ukJnM+yl/LypDUw5LKkRXGm8fVRHyqtOnfy5/8AlvgCq5apDP+ZdpAAAAABJRU5ErkJggg=="></a>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>

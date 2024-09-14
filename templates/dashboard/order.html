@@ -1,0 +1,42 @@
+{% extends 'partials/base.html' %}
+{% block title %}Order page{% endblock %}
+
+{% block content %}
+    <!--Table-->
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-12">
+                <!-- <label>
+                    Search :
+                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tfourni">
+                </label> -->
+                <table class="table bg-white">
+                    <thead class="bg-info">
+                        <tr class="text-white">
+                            <th scope="col">Product</th>
+                            <th scope="col">Client</th>
+                            <th scope="col">Quantite</th>
+                            <th scope="col">Utilisateur</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>{{order.product.name}}</td>
+                            <td>{{order.client.name}}</td>
+                            <td>{{order.quantite}}</td>
+                            <td>{{order.staff.username}}</td>
+                            <td>{{order.date}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--End Table-->
+{% endblock %}
